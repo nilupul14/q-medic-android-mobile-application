@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "955711704810",
+    "firebase_url": "https://qmedic-f526a.firebaseio.com",
+    "project_id": "qmedic-f526a",
+    "storage_bucket": "qmedic-f526a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955711704810:android:1f78219cafc22231",
+        "android_client_info": {
+          "package_name": "com.example.paul14.qmedic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955711704810-oqjehvkhkoda151ku817l15qd829mmo3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.paul14.qmedic",
+            "certificate_hash": "92a137f121c08530baa74ff9443236db63f809a6"
+          }
+        },
+        {
+          "client_id": "955711704810-o1c8jhnpktu7k2ii0uvv414h3m5mfksl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxiCjyLXnkfjnsWF-2uS3OF0N7mLvBMbo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955711704810-o1c8jhnpktu7k2ii0uvv414h3m5mfksl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
