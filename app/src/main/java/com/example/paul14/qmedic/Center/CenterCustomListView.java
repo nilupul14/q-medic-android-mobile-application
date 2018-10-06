@@ -1,4 +1,4 @@
-package com.example.paul14.qmedic.doctor;
+package com.example.paul14.qmedic.Center;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
@@ -12,20 +12,21 @@ import android.widget.TextView;
 
 import com.example.paul14.qmedic.R;
 
-public class DoctorCustomListView extends ArrayAdapter<String>{
 
-    private String [] doctorname;
-    private String [] desc;
-    private String [] center;
+public class CenterCustomListView extends ArrayAdapter<String> {
+
+    private String [] centername;
+    private String [] tpno;
+    private String [] address;
     private Integer [] imgid;
     private Activity context;
 
-    public DoctorCustomListView( Activity context, String[] doctorname, String[] desc, String[] center, Integer[] imgid) {
-        super(context, R.layout.doctor_listview ,doctorname );
+    public CenterCustomListView(Activity context, String[] centername, String[] tpno, String[] address, Integer[] imgid ) {
+        super(context, R.layout.center_listview,centername);
 
-        this.doctorname = doctorname;
-        this.desc = desc;
-        this.center = center;
+        this.centername = centername;
+        this.tpno = tpno;
+        this.address = address;
         this.imgid = imgid;
         this.context = context;
     }
@@ -35,21 +36,21 @@ public class DoctorCustomListView extends ArrayAdapter<String>{
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         View ree = convertView;
-        ViewHolder viewHolder = null;
+        CenterCustomListView.ViewHolder viewHolder = null;
         if(ree == null){
             LayoutInflater layoutInflater = context.getLayoutInflater();
-            ree = layoutInflater.inflate(R.layout.doctor_listview, null, true);
+            ree = layoutInflater.inflate(R.layout.center_listview, null, true);
             viewHolder = new ViewHolder(ree);
             ree.setTag(viewHolder);
         }
         else {
-            viewHolder = (ViewHolder) ree.getTag();
+            viewHolder = (CenterCustomListView.ViewHolder) ree.getTag();
         }
 
         viewHolder.ivw.setImageResource(imgid[position]);
-        viewHolder.tvw1.setText(doctorname[position]);
-        viewHolder.tvw2.setText(desc[position]);
-        viewHolder.tvw3.setText(center[position]);
+        viewHolder.tvw1.setText(centername[position]);
+        viewHolder.tvw2.setText(tpno[position]);
+        viewHolder.tvw3.setText(address[position]);
         return ree;
     }
 
@@ -61,9 +62,9 @@ public class DoctorCustomListView extends ArrayAdapter<String>{
         ImageView ivw;
 
         ViewHolder(View v){
-            tvw1 = v.findViewById(R.id.tvdoctorname);
-            tvw2 = v.findViewById(R.id.tvdescription);
-            tvw3 = v.findViewById(R.id.tvmedicalcenter);
+            tvw1 = v.findViewById(R.id.tvcentername);
+            tvw2 = v.findViewById(R.id.tvtelephonenumber);
+            tvw3 = v.findViewById(R.id.tvaddress);
             ivw = v.findViewById(R.id.imageView);
         }
     }

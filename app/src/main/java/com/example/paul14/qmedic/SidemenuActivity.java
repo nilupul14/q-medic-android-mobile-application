@@ -14,10 +14,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.paul14.qmedic.center.CenterlistvActivity;
-import com.example.paul14.qmedic.center.McenterProfile;
-import com.example.paul14.qmedic.doctor.DoctorProfile;
-import com.example.paul14.qmedic.doctor.DoctorlistvActivity;
+import com.example.paul14.qmedic.Appointment.AppointmentActivity;
+import com.example.paul14.qmedic.GoogleMap.MainActivity;
+import com.example.paul14.qmedic.Center.CenterlistvActivity;
+import com.example.paul14.qmedic.Center.McenterProfile;
+import com.example.paul14.qmedic.Doctor.DoctorProfile;
+import com.example.paul14.qmedic.Doctor.DoctorlistvActivity;
 
 public class SidemenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -91,25 +93,25 @@ public class SidemenuActivity extends AppCompatActivity
             Intent intent = new Intent(SidemenuActivity.this, DoctorlistvActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_gallery) {
-         //CenterlistvActivity
-        Intent intent = new Intent(SidemenuActivity.this, CenterlistvActivity.class);
-        startActivity(intent);
-        //Location
+            //CenterlistvActivity
+            Intent intent = new Intent(SidemenuActivity.this, CenterlistvActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
-        Intent intent = new Intent(SidemenuActivity.this, GmapsActivity.class);
-        startActivity(intent);
+            //Location
+            Intent intent = new Intent(SidemenuActivity.this, MainActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_manage) {
-//          //DoctorProfile
-        Intent intent2 = new Intent(SidemenuActivity.this, DoctorProfile.class);
-        startActivity(intent2);
+//      //DoctorProfile
+            Intent intent2 = new Intent(SidemenuActivity.this, McenterProfile.class);
+            startActivity(intent2);
         } else if (id == R.id.nav_share) {
-//         //McenterProfile
-        Intent intent2 = new Intent(SidemenuActivity.this, McenterProfile.class);
-        startActivity(intent2);
+//      //McenterProfile
+            Intent intent6 = new Intent(SidemenuActivity.this, AppointmentActivity.class);
+            startActivity(intent6);
         } else if (id == R.id.nav_send) {
-
+            Intent intent2 = new Intent(SidemenuActivity.this, McenterProfile.class);
+            startActivity(intent2);
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

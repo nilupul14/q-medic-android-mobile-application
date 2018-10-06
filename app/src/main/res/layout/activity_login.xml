@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:background="@drawable/grad_bg"
-    tools:context=".LoginActivity">
+    tools:context=".AccountActivity.LoginActivity">
 
     <RelativeLayout
         android:id="@+id/rellayl1"
@@ -31,6 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone">
+            <!---->
 
             <TextView
                 android:id="@+id/tv_login"
@@ -66,6 +67,7 @@
                         android:textSize="16dp"/>
 
                     <EditText
+                        android:id="@+id/loginEmail"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginTop="5dp"
@@ -94,6 +96,7 @@
                         android:textSize="16dp"/>
 
                     <EditText
+                        android:id="@+id/loginPassword"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginTop="5dp"
@@ -146,6 +149,7 @@
             android:textColor="@color/accent"/>
 
         <Button
+            android:id="@+id/forgotPassword_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

@@ -1,8 +1,9 @@
-package com.example.paul14.qmedic.doctor;
+package com.example.paul14.qmedic.Doctor;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ public class DoctorProfile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_doctor_profile);
 
 
@@ -28,7 +30,7 @@ public class DoctorProfile extends AppCompatActivity {
         address = findViewById(R.id.tv_address);
         email = findViewById(R.id.email2);
         phone = findViewById(R.id.phone2);
-        twitter = findViewById(R.id.twitter2);
+ //       twitter = findViewById(R.id.twitter2);
 //        image = findViewById(R.id.userImage);
 
         Intent intent = getIntent();
@@ -71,7 +73,7 @@ public class DoctorProfile extends AppCompatActivity {
         this.name.setText(name);
         this.address.setText(address);
         this.email.setText(email);
-        this.phone.setText(phone);
-        this.twitter.setText(twitter);
+//        this.phone.setText(phone);
+//        this.twitter.setText(twitter);
     }
 }

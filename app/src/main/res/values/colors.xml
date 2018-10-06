@@ -3,14 +3,14 @@
     <!--<color name="colorPrimary">#3F51B5</color>-->
     <!--<color name="colorPrimaryDark">#303F9F</color>-->
     <!--<color name="colorAccent">#FF4081</color>-->
-    <color name="colorPrimary">#23A7D8</color>
+    <color name="colorPrimary">#2e406d</color>
     <color name="colorPrimaryDark">#23A7D8</color>
     <color name="colorAccent">#FFFFFF</color>
     <color name="accent">#FFFFFF</color>
     <!--<color name="white">#FFFFFF</color>-->
     <color name="transparent">#00000000</color>
-    <color name="gradStart">#19AA8B</color>
-    <color name="gradStop">#23A7D8</color>
+    <color name="gradStart">#2e406d</color>
+    <color name="gradStop">#051438</color>
 
     <!--profile-->
     <color name="address">#2F7092</color>
@@ -22,10 +22,10 @@
     <color name="gradStart7">#63c9ff</color>
     <color name="followersBg">#65DCE5</color>
     <color name="followingBg">#49BEFF</color>
-    <color name="grey">#E5E5E5</color>
+    <color name="grey">#ccc7c7</color>
     <color name="yellowA">#24478f</color>
     <color name="yellowB">#adc2eb</color>
-
+    <color name="dpBack">#FFD300</color>         <!--#FECC04-->
     <color name="colorPrimaryNew">#49BEFF</color>
     <color name="colorPrimaryDarkNew">#65DCE5</color>
     <color name="colorAccentNew">#0D5D98</color>

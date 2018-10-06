@@ -2,15 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.paul14.qmedic">
 
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality. 
-    -->
+    <!--Location Permissions-->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--Location Permissions-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--For Firebase code internet access-->
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--Some code here-->
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <application
@@ -20,42 +20,54 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--"@android:style/Theme.DeviceDefault"-->
+
+        <!--Fixed my Google Map Key-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB74syhRGc8zHv22mlC1NvEFatigYCmaB8"/>
+
+        <!--Configuration Google Map API -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <!-- for 7-line  ;;; "@mipmap/ic_launcher" -->
         <activity
             android:name=".SidemenuActivity"
             android:label="@string/title_activity_sidemenu"
             android:theme="@style/AppTheme.NoActionBar">
-
         </activity>
-        <activity android:name=".LoginActivity">
+
+        <!--Fisrt Interface Login-->
+        <activity android:name=".AccountActivity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--Others Interfsces-->
         <activity android:name=".HomeActivity" />
-        <activity android:name=".doctor.DoctorlistvActivity" />
-        <activity android:name=".center.CenterlistvActivity" />
-        <activity android:name=".doctor.DoctorProfile" />
-        <activity android:name=".center.McenterProfile" />
-        <activity android:name=".SignupActivity" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
-        -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+        <activity android:name=".Doctor.DoctorlistvActivity" />
+        <activity android:name=".Center.CenterlistvActivity" />
+        <activity android:name=".Doctor.DoctorProfile" />
+        <activity android:name=".Center.McenterProfile" />
+        <activity android:name=".AccountActivity.SignupActivity" />
+        <!--<activity android:name=".MapActivity" />-->
+        <activity android:name=".GoogleMap.MainActivity"></activity>
+        <activity android:name=".Appointment.AppointmentActivity"></activity>
 
-        <activity
-            android:name=".GmapsActivity"
-            android:label="@string/title_activity_gmaps"></activity>
+        <!--<meta-data-->
+            <!--android:name="com.google.android.geo.API_KEY"-->
+            <!--android:value="@string/google_maps_key" />-->
+
+        <!--<activity-->
+            <!--android:name=".GmapsActivity"-->
+            <!--android:label="@string/title_activity_gmaps" />-->
+
+        <!--New google maps fixed here-->
+        <!--<activity android:name=".GoogleMapActivity"></activity>-->
+
     </application>
-
 </manifest>

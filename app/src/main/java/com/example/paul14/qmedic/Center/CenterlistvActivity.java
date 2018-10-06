@@ -1,4 +1,4 @@
-package com.example.paul14.qmedic.center;
+package com.example.paul14.qmedic.Center;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
